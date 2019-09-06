@@ -33,23 +33,33 @@ header h1{
     height: 100px;
     width: 600px;
     flex: 1;
+    transition:all 0.07s; 
+    
+    transition: all .07s ease;
 }
-.pad1{
+
+.playing{
+    transform:scale(1.1);
+    border-color: #ff3000;
+}
+
+
+#pad1{
     background-color:#b892e4
 }
-.pad2{
+#pad2{
     background-color:#e4e392
 }
-.pad3{
+#pad3{
     background-color:#92a8e4
 }
-.pad4{
+#pad4{
     background-color:#e492b8
 }
-.pad5{
+#pad5{
     background-color:#b7e492
 }
-.pad6{
+#pad6{
     background-color:#e49292
 }
 

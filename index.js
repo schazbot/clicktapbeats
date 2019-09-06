@@ -1,31 +1,19 @@
-window.addEventListener('load', () => {
-    const sounds = document.querySelectorAll(".sound")
-    const pads = document.querySelectorAll(".pads div")
-    const visual = document.querySelector(".visual")
-    const colours = [
-        "#b892e4",
-        "#e4e392",
-        "#92a8e4",
-        "#e492b8",
-        "#b7e492",
-        "#e49292"
-    ]
+window.addEventListener('keydown', function (e) {
+    const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    const key = document.querySelector(`.pad[data-key="${e.keyCode}"]`)
 
-    pads.forEach((pad, index) => {
-        pad.addEventListener('click', function () {
-            sounds[index].currentTime = 0
-            sounds[index].play()
-            createBubbles(index)
-        })
-    })
+    if (!sound) return
+    sound.currentTime = 0
+    sound.play()
+    key.classList.add('playing')
 
-    const createBubbles = (index) => { 
-        const bubble = document.createElement("div")
-        visual.appendChild(bubble)
-        bubble.style.backgroundColor = colours[index]
-        bubble.style.animation = "jump 1s ease"
-        bubble.addEventListener("animationend", function (){ 
-            visual.removeChild(this)
-        })
+    function removeTransition(e) { 
+        if (e.propertyName !== 'transform') return
+        console.log(e.propertyName)
+        this.classList.remove('playing')
     }
+
+    const pads = document.querySelectorAll('.pad')
+    pads.forEach(pad => pad.addEventListener('transitionend', removeTransition))
 })
+
