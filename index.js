@@ -17,7 +17,7 @@ window.addEventListener('keydown', function (e) {
     pads.forEach(pad => pad.addEventListener('transitionend', removeTransition))
 })
 
-var context = new AudioContext();
+// var context = new AudioContext();
 
 function sequencer() {
     const kick = new Tone.Player("./808/BD7550.WAV").toDestination()
@@ -26,15 +26,16 @@ function sequencer() {
     let index = 0
 
     Tone.Transport.scheduleRepeat(repeat, "16n")
-    Tone.Transport.start()
 
-    const startStopButton = document.querySelector('#startStop').addEventListener('click', function() {
-        Tone.Transport.stop(() => {
-          console.log('Playback resumed successfully');
-        });
-      });
-
-
+    const startStopButton = document.querySelector('#startStop')
+    startStopButton.addEventListener('click', () => {
+        if (startStopButton.checked) {
+            Tone.Transport.start()
+        } else {
+            Tone.Transport.stop()
+        }
+    }
+    )
 
 
     function repeat() {
@@ -57,27 +58,19 @@ function sequencer() {
 
         index++
     }
+
 }
 
-// function startStop() {
-//     const startStopButton = document.querySelector("#startStop")
-//     startStopButton.addEventListener('click', () => {
-//         Tone.Transport.start()
-
-//         var context = new AudioContext();
-//         context.resume().then(() => console.log("startStopButton clicked"))
-//     }
-
-//     )
-
-// }
-
-function init() {
-    sequencer()
-    // startStop()
-}
-
-init()
 
 
 
+
+
+
+
+
+
+
+
+
+sequencer()
