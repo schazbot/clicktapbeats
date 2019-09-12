@@ -13,33 +13,104 @@
 <body>
     <div class="app">
         <header>
-            <h1>ClickBeats</h1>
+            <h1>ClickTapBeats</h1>
         </header>
+        <audio src="./808/BD7550.WAV"></audio>
+
+        <div class="sequencer">
+            <div class="transport">
+                Start/Stop<input  id="startStop" type="checkbox" >
+    
+            </div>
+                
+
+
+            <div class="hi-hat"> 
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <span>hihats</span>
+            </div>
+            <div class="snare">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <span>snare</span>
+                </div>
+            <div class="kick">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <input type="checkbox">
+                    <span>kick</span>
+                </div>
+        </div>
+
+
+        <audio data-key="65" class="sound" src="./sounds/bubbles.mp3"></audio>
+        <audio data-key="68" class="sound" src="./sounds/clay.mp3"></audio>
+        <audio data-key="71" class="sound" src="./sounds/confetti.mp3"></audio>
+        <audio data-key="74" class="sound" src="./sounds/glimmer.mp3"></audio>
+        <audio data-key="76" class="sound" src="./sounds/moon.mp3"></audio>
+        <audio data-key="222" class="sound" src="./sounds/ufo.mp3"></audio>
 
         <div class="visual"></div>                                                                  
             <div class="pads">
-                <div class="pad1">
-                    <audio class="sound" src="./sounds/bubbles.mp3"></audio>
+                <div data-key="65" class="pad" id="pad1">
                 </div>
-                <div class="pad2">
-                    <audio class="sound" src="./sounds/clay.mp3"></audio>
+                <div data-key="68" class="pad" id="pad2">
                 </div>
-                <div class="pad3">
-                    <audio class="sound" src="./sounds/confetti.mp3"></audio>
+                <div data-key="71" class="pad" id="pad3">
                 </div>
-                <div class="pad4">
-                    <audio class="sound" src="./sounds/glimmer.mp3"></audio>
+                <div data-key="74" class="pad" id="pad4">
                 </div>
-                <div class="pad5">
-                    <audio class="sound" src="./sounds/moon.mp3"></audio>
+                <div data-key="76" class="pad" id="pad5">
                 </div>
-                <div class="pad6">
-                    <audio class="sound" src="./sounds/ufo.mp3"></audio>
+                <div data-key="222" class="pad" id="pad6">
                 </div>
             </div>
         
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.3.21/Tone.js"></script>
 <script src="index.js">
 
 </script>
