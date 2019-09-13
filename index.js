@@ -17,12 +17,14 @@ window.addEventListener('keydown', function (e) {
     pads.forEach(pad => pad.addEventListener('transitionend', removeTransition))
 })
 
-// var context = new AudioContext();
+var context = new AudioContext();
 
 function sequencer() {
     const kick = new Tone.Player("./808/BD7550.WAV").toDestination()
     const snare = new Tone.Player("./808/SD7510.WAV").toDestination()
     const hiHat = new Tone.Player("./808/HH00.WAV").toDestination()
+    const rimShot = new Tone.Player("./808/RS.WAV").toDestination()
+
     let index = 0
 
     Tone.Transport.scheduleRepeat(repeat, "16n")
@@ -49,6 +51,12 @@ function sequencer() {
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`)
         if (snareInputs.checked) {
             snare.start()
+        }
+
+        let rimShotInputs = document.querySelector(`.rim-shot input:nth-child(${step + 1})`)
+        if (rimShotInputs.checked) { 
+            rimShot.start()
+            console.log(rimShotInputs)
         }
 
         let hiHatInputs = document.querySelector(`.hi-hat input:nth-child(${step + 1})`)
