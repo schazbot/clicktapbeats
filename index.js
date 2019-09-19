@@ -29,11 +29,9 @@ const bpmOutput = document.querySelector('#bpm-output')
 
 
 function sequencer() {
-        tempoSlider.addEventListener('input', () => {
-            bpmOutput.innerText = tempoSlider.value
-
+    tempoSlider.addEventListener('input', () => {
+        bpmOutput.innerText = tempoSlider.value
     })
-
 
     const kick = new Tone.Player("./808/BD7550.WAV").toDestination()
     const snare = new Tone.Player("./808/SD7510.WAV").toDestination()
@@ -41,10 +39,6 @@ function sequencer() {
     const rimShot = new Tone.Player("./808/RS.WAV").toDestination()
 
     let index = 0
-
-    Tone.Transport.bpm.value = tempoSlider.value
-
-
 
     Tone.Transport.scheduleRepeat(repeat, "16n")
 

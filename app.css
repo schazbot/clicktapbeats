@@ -22,6 +22,10 @@ header h1{
     font-size: 40px;
 }
 
+header h2{
+    color :#cfcfcf;
+}
+
 .pads{
     background-color: lightblue;
     width: 100%;
@@ -87,7 +91,17 @@ header h1{
         left: 80%;
     }
 }
-  
+
+.transport{
+       display: inline-flex;  
+       padding: 5%; 
+}
+.tempoSlider{
+        float: right;
+        display: inline-flex;  
+       padding: 5%;
+}
+
 
 input[type="checkbox"]{
     cursor: pointer;
@@ -217,3 +231,5 @@ input[type="checkbox"]{
       input[type=range].slider:focus::-ms-fill-upper {
         background: #ffffff;
       }
+
+   
