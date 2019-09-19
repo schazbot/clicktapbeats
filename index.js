@@ -17,17 +17,39 @@ window.addEventListener('keydown', function (e) {
     pads.forEach(pad => pad.addEventListener('transitionend', removeTransition))
 })
 
-// var context = new AudioContext();
+var context = new AudioContext();
+
+
+const tempoSlider = document.querySelector('#tempo-slider')
+
+tempoSlider.addEventListener('change', e => Tone.Transport.bpm.value = e.target.value
+)
+
+const bpmOutput = document.querySelector('#bpm-output')
+
 
 function sequencer() {
+        tempoSlider.addEventListener('input', () => {
+            bpmOutput.innerText = tempoSlider.value
+
+    })
+
+
     const kick = new Tone.Player("./808/BD7550.WAV").toDestination()
     const snare = new Tone.Player("./808/SD7510.WAV").toDestination()
     const hiHat = new Tone.Player("./808/HH00.WAV").toDestination()
+    const rimShot = new Tone.Player("./808/RS.WAV").toDestination()
+
     let index = 0
+
+    Tone.Transport.bpm.value = tempoSlider.value
+
+
 
     Tone.Transport.scheduleRepeat(repeat, "16n")
 
     const startStopButton = document.querySelector('#startStop')
+
     startStopButton.addEventListener('click', () => {
         if (startStopButton.checked) {
             Tone.Transport.start()
@@ -49,6 +71,11 @@ function sequencer() {
         let snareInputs = document.querySelector(`.snare input:nth-child(${step + 1})`)
         if (snareInputs.checked) {
             snare.start()
+        }
+
+        let rimShotInputs = document.querySelector(`.rim-shot input:nth-child(${step + 1})`)
+        if (rimShotInputs.checked) {
+            rimShot.start()
         }
 
         let hiHatInputs = document.querySelector(`.hi-hat input:nth-child(${step + 1})`)
