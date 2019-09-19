@@ -19,15 +19,17 @@
 
         <div class="sequencer">
             <div class="transport">
-                <input label="start/stop" id="startStop" type="checkbox" >
-                start/stop
-            </div>
-            <div class="tempoSlider">
-                <input id="tempo-slider" type="range" min="20" max="200" value="120" >
-                <output id="bpm-output"></output>
+                <input label="start/stop" id="startStop" type="checkbox">
+                start/stop</label>
+
             </div>
             
-            <div class="hi-hat"> 
+            <div class="tempoSlider">
+                <input id="tempo-slider" type="range" min="20" max="200" value="120">
+                <output id="bpm-output"></output><label> bpm</label>
+            </div>
+
+            <div class="hi-hat">
                 <input type="checkbox">
                 <input type="checkbox">
                 <input type="checkbox">
@@ -46,63 +48,63 @@
                 <input type="checkbox">
                 <span>hihats</span>
             </div>
-            <div class="rim-shot"> 
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <span>rimshots</span>
-                </div>
+            <div class="rim-shot">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <span>rimshots</span>
+            </div>
             <div class="snare">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <span>snare</span>
-                </div>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <span>snare</span>
+            </div>
             <div class="kick">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <input type="checkbox">
-                    <span>kick</span>
-                </div>
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <input type="checkbox">
+                <span>kick</span>
+            </div>
         </div>
 
 
@@ -113,22 +115,28 @@
         <audio data-key="76" class="sound" src="./sounds/Ensoniq-SD-1-Bass-Pad-C3.wav"></audio>
         <audio data-key="222" class="sound" src="./sounds/Ensoniq-ESQ-1-Omen-Pad-C2.wav"></audio>
 
-        <div class="visual"></div>                                                                  
-            <div class="pads">
-                <div data-key="65" class="pad" id="pad1">
-                </div>
-                <div data-key="68" class="pad" id="pad2">
-                </div>
-                <div data-key="71" class="pad" id="pad3">
-                </div>
-                <div data-key="74" class="pad" id="pad4">
-                </div>
-                <div data-key="76" class="pad" id="pad5">
-                </div>
-                <div data-key="222" class="pad" id="pad6">
-                </div>
+        <div class="visual"></div>
+        <div class="pads">
+            <div data-key="65" class="pad" id="pad1">
+                <h2>a</h2>
             </div>
-        
+            <div data-key="68" class="pad" id="pad2">
+                    <h2>d</h2>
+            </div>
+            <div data-key="71" class="pad" id="pad3">
+                    <h2>g</h2>
+            </div>
+            <div data-key="74" class="pad" id="pad4">
+                    <h2>j</h2>
+            </div>
+            <div data-key="76" class="pad" id="pad5">
+                    <h2>l</h2>
+            </div>
+            <div data-key="222" class="pad" id="pad6">
+                    <h2>''</h2>'
+            </div>
+        </div>
+
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.3.21/Tone.js"></script>
