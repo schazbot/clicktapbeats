@@ -1,5 +1,7 @@
 # clicktapbeats
 
+[Play Now!](https://schazbot.github.io/clicktapbeats/)
+
 * Click on the grid to place your drum sounds
 * Hit the start button
 * Add pad sounds to your beats by pressing any of the following keys on your keyboard : A, D, G, J, L, "
